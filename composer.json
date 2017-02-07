@@ -1,0 +1,29 @@
+{
+    "name": "elevati/wp-api-multiple-posttype",
+    "type": "wordpress-plugin",
+    "description": "Extension of wp/v2/posts api to allow query multiple post types",
+    "license": "GPL2+",
+    "authors": [
+        {
+            "name": "Elevati Team",
+            "homepage": "http://elevati.com/"
+        },
+        {
+            "name": "Ruben Vreeken",
+            "homepage": "https://github.com/Rayraz"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.3.4",
+        "wp-coding-standards/wpcs": "0.6.0"
+    },
+    "extra": {
+    },
+    "scripts": {
+        "post-install-cmd": "\"phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs",
+        "post-update-cmd": "\"phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+    }
+}
