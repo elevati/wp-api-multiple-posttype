@@ -2,18 +2,25 @@
 
 Extension of wp/v2/posts api to allow query multiple post types
 
+
 ## About
 
-Want to get your site's posts, pages, articles, events/? 
-Endpoint is '/wp-json/wp/v2/multiple-post-type'
-`GET` request to `/wp-json/wp/v2/multiple-post-type`.
-Get the page with slug "about-me"? `GET /wp-json/wp/v2/multiple-post-type?slug=about-me`. 
-search term "awesome"? `GET /wp-json/wp/v2/multiple-post-type?search=awesome`. 
+Want to get your site's posts, pages, articles, events? 
+
+Use the Endpoint: '/wp-json/wp/v2/multiple-post-type'
+
+List: `GET` request to `/wp-json/wp/v2/multiple-post-type`.
+
+Get the page with slug "about-me": `GET /wp-json/wp/v2/multiple-post-type?slug=about-me`. 
+
+Search term "awesome": `GET /wp-json/wp/v2/multiple-post-type?search=awesome`. 
+
 
 ## Credits
 
 Build using the code shared by Ruben Vreeken, (https://github.com/Rayraz) 
 on stackoverflow (http://stackoverflow.com/questions/38059805/query-multiple-post-types-using-wp-rest-api-v2-wordpress)
+
 
 ## License
 
