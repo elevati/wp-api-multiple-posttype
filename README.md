@@ -9,15 +9,17 @@ Want to get your site's posts, pages, articles, events?
 
 Use the Endpoint: '/wp-json/wp/v2/multiple-post-type'
 
-List: `GET` request to `/wp-json/wp/v2/multiple-post-type`.
+List: 
+
+`GET` request to `/wp-json/wp/v2/multiple-post-type&type[]=post&type[]=page`
 
 Get the page with slug "about-me": 
 
-`GET /wp-json/wp/v2/multiple-post-type?slug=about-me&type[]=posts&type[]=pages`
+`GET /wp-json/wp/v2/multiple-post-type?slug=about-me&type[]=post&type[]=page`
 
 Search term "awesome": 
 
-`GET /wp-json/wp/v2/multiple-post-type?search=awesome&type[]=posts&type[]=pages&type[]=articles`
+`GET /wp-json/wp/v2/multiple-post-type?search=awesome&type[]=post&type[]=page&type[]=articles`
 
 
 ## Credits
