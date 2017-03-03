@@ -17,7 +17,7 @@ Get the page with slug "about-me":
 
 Search term "awesome": 
 
-`GET /wp-json/wp/v2/multiple-post-type?search=awesome&type[]=posts&type[]=pages`
+`GET /wp-json/wp/v2/multiple-post-type?search=awesome&type[]=posts&type[]=pages&type[]=articles`
 
 
 ## Credits
