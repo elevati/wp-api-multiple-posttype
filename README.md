@@ -11,7 +11,7 @@ Use the Endpoint: '/wp-json/wp/v2/multiple-post-type'
 
 List: 
 
-`GET` request to `/wp-json/wp/v2/multiple-post-type&type[]=post&type[]=page`
+`GET` request to `/wp-json/wp/v2/multiple-post-type?&type[]=post&type[]=page`
 
 Get the page with slug "about-me": 
 
