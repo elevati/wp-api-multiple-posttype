@@ -13,11 +13,11 @@ List: `GET` request to `/wp-json/wp/v2/multiple-post-type`.
 
 Get the page with slug "about-me": 
 
-`GET /wp-json/wp/v2/multiple-post-type?slug=about-me&type[]=posts&type[]=pages&type[]=articles&type[]=events`.
+`GET /wp-json/wp/v2/multiple-post-type?slug=about-me&type[]=posts&type[]=pages`
 
 Search term "awesome": 
 
-`GET /wp-json/wp/v2/multiple-post-type?search=awesome&type[]=posts&type[]=pages&type[]=articles&type[]=events`.
+`GET /wp-json/wp/v2/multiple-post-type?search=awesome&type[]=posts&type[]=pages`
 
 
 ## Credits
