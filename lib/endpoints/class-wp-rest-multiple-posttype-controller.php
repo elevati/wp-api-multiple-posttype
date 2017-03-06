@@ -69,7 +69,7 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
 
         # Param Validation
         if (empty($args['post_type']) || !is_array($args['post_type'])) {
-            return new WP_Error('type_need_to_be_array', 'Type Param is a required parameter and needs to be an array: &type[]=post&type[]=page&type[]=slideshow');
+            return new WP_Error('type_need_to_be_array', 'Type Param is a required parameter and needs to be an array: &type[]=post&type[]=page&type[]=slideshow', ['status' => 422]);
         }
 
         $args['date_query'] = array();
