@@ -344,7 +344,7 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
             'default' => array(),
             'sanitize_callback' => 'wp_parse_id_list',
             'validate_callback' => 'rest_validate_request_arg',
-            'items' => array (
+            'items' => array(
                 'type' => 'integer',
             ),
         );
@@ -354,7 +354,7 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
             'default' => array(),
             'sanitize_callback' => 'wp_parse_id_list',
             'validate_callback' => 'rest_validate_request_arg',
-            'items' => array (
+            'items' => array(
                 'type' => 'integer',
             ),
         );
