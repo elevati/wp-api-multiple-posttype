@@ -344,6 +344,9 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
             'default' => array(),
             'sanitize_callback' => 'wp_parse_id_list',
             'validate_callback' => 'rest_validate_request_arg',
+            'items' => array(
+                'type' => 'integer',
+            ),
         );
         $params['author_exclude'] = array(
             'description' => __('Ensure result set excludes posts assigned to specific authors.'),
@@ -351,6 +354,9 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
             'default' => array(),
             'sanitize_callback' => 'wp_parse_id_list',
             'validate_callback' => 'rest_validate_request_arg',
+            'items' => array(
+                'type' => 'integer',
+            ),
         );
 
         $params['before'] = array(
