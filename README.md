@@ -30,5 +30,5 @@ on stackoverflow (http://stackoverflow.com/questions/38059805/query-multiple-pos
 
 ## License
 
-[GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)
+[GPL-3.0-or-later](http://www.gnu.org/licenses/gpl-3.0.html)
 
