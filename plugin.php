@@ -7,7 +7,7 @@
  * Version:           1.0.2
  * Author:            ElevatiInfotech
  * Author URI:        https://github.com/elevati
- * License:           GPL-3.0
+ * License:           GPL-3.0-or-later
  */
 
 /**

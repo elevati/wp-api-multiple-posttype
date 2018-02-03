@@ -2,7 +2,7 @@
     "name": "elevati/wp-api-multiple-posttype",
     "type": "wordpress-plugin",
     "description": "Extension of wp/v2/posts api to allow query multiple post types",
-    "license": "GPL3",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Elevati Team",
