@@ -253,7 +253,6 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller
     protected function get_allowed_query_vars($post_types)
     {
         global $wp;
-        $editPosts = true;
 
         /**
          * Filter the publicly allowed query vars.
