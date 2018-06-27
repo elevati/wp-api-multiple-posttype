@@ -11,9 +11,14 @@
  * @author Ruben Vreeken
  * @author Elevati Team
  */
-class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
+class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller
+{
 
-    public function __construct() {
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
         $this->version = '2';
         $this->namespace = 'wp/v' . $this->version;
         $this->rest_base = 'multiple-post-type';
@@ -22,7 +27,8 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
     /**
      * Register the routes for the objects of the controller.
      */
-    public function register_routes() {
+    public function register_routes()
+    {
         register_rest_route($this->namespace, '/' . $this->rest_base, array(
             array(
                 'methods' => WP_REST_Server::READABLE,
@@ -36,9 +42,11 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
     /**
      * Check if a given request has access to get items
      *
-     * @return bool
+     * @param WP_REST_Request $request
+     * @return boolean
      */
-    public function get_items_permissions_check($request) {
+    public function has_items_permissions_check($request)
+    {
         return true;
     }
 
@@ -48,7 +56,8 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
      * @param WP_REST_Request  $request  Full data about the request.
      * @return WP_Error|WP_REST_Response
      */
-    public function get_items($request) {
+    public function get_items($request)
+    {
         $args = array();
         $args['author__in'] = $request['author'];
         $args['author__not_in'] = $request['author_exclude'];
@@ -73,14 +82,12 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
         }
 
         $args['date_query'] = array();
-        // Set before into date query. Date query must be specified as an array
-        // of an array.
+        // Set before into date query. Date query must be specified as an array of an array.
         if (isset($request['before'])) {
             $args['date_query'][0]['before'] = $request['before'];
         }
 
-        // Set after into date query. Date query must be specified as an array
-        // of an array.
+        // Set after into date query. Date query must be specified as an array of an array.
         if (isset($request['after'])) {
             $args['date_query'][0]['after'] = $request['after'];
         }
@@ -205,8 +212,8 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
      *
      * @return array            $query_args
      */
-    protected function prepare_items_query($prepared_args = array(), $request = null) {
-
+    protected function prepare_items_query($prepared_args = array(), $request = null)
+    {
         $valid_vars = array_flip($this->get_allowed_query_vars($request['type']));
         $query_args = array();
         foreach ($valid_vars as $var => $index) {
@@ -239,9 +246,12 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
     /**
      * Get all the WP Query vars that are allowed for the API request.
      *
+     * @global object $wp
+     * @param array $post_types
      * @return array
      */
-    protected function get_allowed_query_vars($post_types) {
+    protected function get_allowed_query_vars($post_types)
+    {
         global $wp;
         $editPosts = true;
 
@@ -326,7 +336,8 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
      *
      * @return array
      */
-    public function get_collection_params() {
+    public function get_collection_params()
+    {
         $params = parent::get_collection_params();
 
         $params['context']['default'] = 'view';
@@ -467,7 +478,8 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller {
      *
      * @return WP_Error|boolean
      */
-    public function validate_user_can_query_private_statuses($value, $request, $parameter) {
+    public function validate_user_can_query_private_statuses($value, $request, $parameter)
+    {
         if ('publish' === $value) {
             return true;
         }
