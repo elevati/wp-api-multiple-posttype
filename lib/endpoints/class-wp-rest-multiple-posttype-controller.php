@@ -45,6 +45,17 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller
      * @param WP_REST_Request $request
      * @return boolean
      */
+    public function get_items_permissions_check($request)
+    {
+        return true;
+    }
+
+    /**
+     * Check if a given request has access to get items
+     *
+     * @param WP_REST_Request $request
+     * @return boolean
+     */
     public function has_items_permissions_check($request)
     {
         return true;
