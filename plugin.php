@@ -13,8 +13,8 @@
 /**
  * WP_REST_Multiple_PostType_Controller class.
  */
-
-function init_wp_rest_multiple_posttype_endpoint() {
+function init_wp_rest_multiple_posttype_endpoint()
+{
     if (!class_exists('WP_REST_Multiple_PostType_Controller')) {
         require_once dirname(__FILE__) . '/lib/endpoints/class-wp-rest-multiple-posttype-controller.php';
     }
@@ -26,4 +26,3 @@ function init_wp_rest_multiple_posttype_endpoint() {
  * REST INIT
  */
 add_action('rest_api_init', 'init_wp_rest_multiple_posttype_endpoint');
-
