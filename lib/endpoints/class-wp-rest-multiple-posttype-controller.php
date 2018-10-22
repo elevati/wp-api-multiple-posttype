@@ -320,6 +320,10 @@ class WP_REST_Multiple_PostType_Controller extends WP_REST_Controller
             'post_parent__not_in',
             'posts_per_page',
             'date_query',
+            'meta_query',
+            'meta_key',
+            'meta_value',
+            'meta_compare'
         );
         $valid_vars = array_merge($valid_vars, $rest_valid);
 
